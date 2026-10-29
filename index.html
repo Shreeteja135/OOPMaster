@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP Master — AI Chatbot</title>
+    <meta
+      name="description"
+      content="OOP Master is a C++-powered multilingual AI chatbot for Object-Oriented Programming."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Ambient Video Backgrounds (Light & Dark Theme) -->
+    <div class="video-bg-container" aria-hidden="true">
+      <video id="bgVideoDark" class="bg-video bg-video-dark" autoplay muted loop playsinline preload="auto">
+        <source src="dark-bg.mp4" type="video/mp4" />
+      </video>
+      <video id="bgVideoLight" class="bg-video bg-video-light" autoplay muted loop playsinline preload="auto">
+        <source src="light-bg.mp4" type="video/mp4" />
+      </video>
+      <div class="video-bg-overlay"></div>
+    </div>
+
+    <div class="page-shell chat-focused-shell">
+      <header class="topbar">
+        <div class="brand" aria-label="OOP Master home">
+          <div class="brand-mark">OOP</div>
+          <div class="brand-text">
+            <span class="brand-name">Master</span>
+            <span class="brand-tag">C++ Engine AI Tutor</span>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Toggle dark/light theme">
+            <span class="theme-icon">🌙</span>
+            <span class="theme-text">Dark Mode</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="chat-main-container">
+        <section id="chatbot" class="chatbot section-frame chat-hero-frame" aria-labelledby="chatbot-title">
+          <div class="chat-header">
+            <div>
+              <p class="eyebrow">C++ Native AI Tutor</p>
+              <h1 id="chatbot-title" class="chat-title">Ask OOP Master</h1>
+            </div>
+            <div class="chat-controls">
+              <span class="mini-label" style="font-size: 0.85rem; color: var(--muted); font-weight: 600;">Language:</span>
+              <div class="human-lang-picker">
+                <button class="lang-chip human-chip active" type="button" data-human-lang="en">English</button>
+                <button class="lang-chip human-chip" type="button" data-human-lang="hi">हिन्दी</button>
+                <button class="lang-chip human-chip" type="button" data-human-lang="mr">मराठी</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="chatbot-shell">
+            <div class="chat-window" id="chatMessages" aria-live="polite">
+              <div class="message bot-message">
+                <span>
+                  👋 <strong>Hello! I am OOP Master</strong>, your AI tutor powered by a high-performance native C++ engine.
+                  <br><br>
+                  Ask me anything about Object-Oriented Programming (Classes, Objects, Inheritance, Polymorphism, Abstraction, Encapsulation, SOLID principles, Design Patterns, or Memory Management) in <strong>English</strong>, <strong>हिन्दी</strong>, or <strong>मराठी</strong>!
+                </span>
+              </div>
+            </div>
+
+            <form id="chatForm" class="chat-form">
+              <input
+                id="chatInput"
+                type="text"
+                placeholder="Ask an OOP question (e.g. 'What is polymorphism in C++?', 'Inheritance kya hota hai?')..."
+                aria-label="Ask OOP Master"
+                autocomplete="off"
+              />
+              <button type="submit" class="primary-button send-btn">
+                <span>Send</span>
+                <span class="send-arrow">➔</span>
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

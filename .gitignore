@@ -1,0 +1,8 @@
+*.exe
+*.o
+*.obj
+__pycache__/
+.vscode/
+.idea/
+gemini_generated_video_*.mp4
+Glass_installation_*.mp4
